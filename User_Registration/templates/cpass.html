@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}
+cpass
+{% endblock title %}
+{% block body %}
+<center>
+    <form method="post">
+        {% csrf_token %}
+        {% comment %} <label for="op">Old Password</label>
+        <input type="text" id="op" name="op"><br><br> {% endcomment %}
+        <label for="np">New Password</label>
+        <input type="text" id="np" name="np"><br><br>
+        <label for="cp">Confirm Password</label>
+        <input type="text" id="cp" name="cp"><br><br>
+        <input type="submit" value="Change Password">
+    </form>
+</center>
+  
+{% endblock body %}

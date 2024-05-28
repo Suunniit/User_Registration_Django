@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}
+fpass
+{% endblock title %}
+{% block body %}
+<center>
+    <form  action="{% url 'uname' %}" method="post" >
+        {% csrf_token %}
+        <input type="text" placeholder="Enter Username" name="un" id="un"><br><br>
+        <input type="submit" value="Send Otp">
+    </form>
+</center>
+{% endblock body %}

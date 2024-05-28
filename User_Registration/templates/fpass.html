@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}
+fpass
+{% endblock title %}
+{% block body %}
+<center>
+    <form method="post" action="{% url 'fpass' %}">
+        {% csrf_token %}
+        <label for="np">New Password</label>
+        <input type="text" id="np" name="np"><br><br>
+        <label for="cp">Confirm Password</label>
+        <input type="text" id="cp" name="cp"><br><br>
+        <input type="submit" value="Change Password">
+    </form>
+</center>
+  
+{% endblock body %}
